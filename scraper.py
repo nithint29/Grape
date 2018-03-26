@@ -4,6 +4,9 @@ import io
 import math
 import time
 
+test_universities = ['Yale','Brown', 'Cornell', 'Harvard', 'Rutgers', 'Cambridge', 'Oxford']
+
+
 # status codes: A: American; U: International, with US degree; I: International, without US degree; O: Other; ?: Unknown
 title = ['Name','Major','Degree','Semester','Status','Notification','Date','GPA','GREV','GREQ','GREW',
          'Nationality','Post_Date','Comment']
@@ -129,6 +132,10 @@ def process_row(dat):
 if __name__ == '__main__':
 
     # generate_url('Princeton University')
-    response = get_data('Stanford University', 'data/stanford.csv')
+    # response = get_data('Stanford University', 'data/stanford.csv')
     # response = get_data('NJIT', 'data/njit.csv')
+    # response = get_data('Georgia Institute Of Technology', 'data/gatech.csv')
+    response = get_data('Georgia Institute Of Technology computer science', 'data/gatech_cs.csv')
+    # for u in test_universities:
+    #     get_data(u+' University', 'data/{}.csv'.format(u.lower()))
 
